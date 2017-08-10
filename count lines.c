@@ -18,7 +18,7 @@ int main (int argc, char* argv[]) {
         FILE *iFile;
         iFile = fopen (argv[i], "r");
         if (!iFile) {
-            printf ("Error: %s: Can't open file\n", argv[i]);
+            printf ("Error: %s: Can't open file\n", argv[i]); /*Выводить имя файла не безопасно, но wc -l поступает именно так.*/
             continue;
         }
         int Lines = 0;
